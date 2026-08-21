@@ -1,17 +1,20 @@
+#' @noRd
+.local_dir <- function() { ... }
 .PKG_NAME <- "methylTFRAnnotationMm10"
 .MOTIF_SETS <- c("altius", "cisbpv2", "jaspar2020")
-.ASSEMBLY <- "hg38"
+.ASSEMBLY <- "Mm10"
 
 #' @keywords internal
 .local_dir <- function() {
     d <- getOption(
         "methylTFRAnnotationMm10.datadir",
-        Sys.getenv("METHYL_TFRANNOTATION_HG38_DIR", "")
+        Sys.getenv("METHYL_TFRANNOTATION_Mm10_DIR", "")
     )
     if (nzchar(d)) d else NULL
 }
 
 #' @keywords internal
+#' @noRd
 #' @description Resolve one annotation resource by file name.
 #' Reads from a local directory when one is configured, otherwise
 #' from AnnotationHub. The local path exists so the package can be
@@ -44,6 +47,7 @@
 }
 
 #' @keywords internal
+#' @noRd
 .check_motif_set <- function(motifSet) {
     motifSet <- tolower(motifSet)
     if (length(motifSet) != 1 || !motifSet %in% .MOTIF_SETS) {
