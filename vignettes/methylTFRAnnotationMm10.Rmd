@@ -1,8 +1,8 @@
 ---
-title: "methylTFRAnnotationHg38"
+title: "methylTFRAnnotationMm10"
 output: BiocStyle::html_document
 vignette: >
-  %\VignetteIndexEntry{methylTFRAnnotationHg38}
+  %\VignetteIndexEntry{methylTFRAnnotationMm10}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,8 +13,8 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 
 # Overview
 
-`methylTFRAnnotationHg38` provides the genome annotations `methylTFR` needs to
-compute bias-corrected transcription factor deviation scores on hg38:
+`methylTFRAnnotationMm10` provides the genome annotations `methylTFR` needs to
+compute bias-corrected transcription factor deviation scores on Mm10:
 
 - **binding sites**, one `GRanges` per motif, each range extended
   so that methylation can be read across the footprint window;
@@ -36,7 +36,7 @@ calls are served from the local AnnotationHub cache.
 # Usage
 
 ```{r, eval = FALSE}
-library(methylTFRAnnotationHg38)
+library(methylTFRAnnotationMm10)
 
 tf_bindsites <- getTFbindsites("altius")
 gcfreqs      <- getGCfreq("altius")
@@ -48,10 +48,8 @@ These are passed straight to `methylTFR::run_methyltfr()`.
 # Available motif sets
 
 ```{r, eval = FALSE}
-methylTFRAnnotationHg38:::.MOTIF_SETS
+methylTFRAnnotationMm10:::.MOTIF_SETS
 ```
-
-Sets ending in `_distal` provide GC frequency tables computed over distal regulatory regions only. They share the unrestricted binding sites, so pass the base set name to `getTFbindsites()` and the `_distal` name to `getGCfreq()`.
 
 # Session info
 
