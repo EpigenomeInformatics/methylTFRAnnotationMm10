@@ -1,0 +1,27 @@
+Package: methylTFRAnnotationMm10
+Title: methylTFR Annotations for mm10
+Description: Precomputed transcription factor binding sites, motif GC
+    frequency tables and a genome-wide GC distribution for use with the
+    methylTFR package. Binding sites are genome-wide motif matches
+    extended to the footprint window methylTFR reads across; the GC
+    tables record how each motif's sites distribute over genome-wide GC
+    quintiles, which is what allows a deviation score to be corrected
+    for sequence composition. The data are hosted on AnnotationHub and
+    retrieved on first use; this package provides the accessors and the
+    documentation.
+Authors@R: person(
+    given = "Irem B.", family = "Gunduz",
+    email = "irembgunduz@gmail.com", role = c("aut", "cre"))
+License: Artistic-2.0
+Encoding: UTF-8
+Version: 0.99.0
+Depends: R (>= 4.3.0)
+Imports: AnnotationHub, GenomicRanges, utils
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0), BiocStyle
+VignetteBuilder: knitr
+biocViews: AnnotationData, AnnotationHub, FunctionalAnnotation,
+    SequenceAnnotation, Homo_sapiens
+BugReports: https://github.com/EpigenomeInformatics/methylTFRAnnotationMm10/issues
+URL: https://github.com/EpigenomeInformatics/methylTFRAnnotationMm10
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3

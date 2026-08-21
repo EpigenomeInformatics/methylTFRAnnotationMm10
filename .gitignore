@@ -1,0 +1,30 @@
+LICENSE.md
+vignettes/*.html
+.DS_Store
+/example/
+inst/doc
+archive/
+dev/
+/icbb/projects/igunduz/methylTFR/R/annotation.R
+methylTFR.BiocCheck/*
+/doc/
+/Meta/
+
+# macOS metadata (AppleDouble sidecars created when copying to non-HFS volumes)
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# R session artefacts
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+.DS_Store
+._*
