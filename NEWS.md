@@ -1,4 +1,4 @@
-# methylTFRAnnotationMm10 0.99.6
+# methylTFRAnnotationMm10 0.99.7
 
 * Initial submission to Bioconductor.
 
