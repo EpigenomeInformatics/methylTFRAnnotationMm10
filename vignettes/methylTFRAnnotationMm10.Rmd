@@ -61,7 +61,7 @@ options(methylTFRAnnotationMm10.datadir = mock_dir)
 
 # Usage
 
-```{r, eval = FALSE}
+```{r usage, eval = FALSE}
 library(methylTFRAnnotationMm10)
 
 tf_bindsites <- getTFbindsites("altius")
@@ -73,13 +73,13 @@ These are passed straight to `methylTFR::run_methyltfr()`.
 
 # Available motif sets
 
-```{r, eval = FALSE}
+```{r motifsets, eval = FALSE}
 methylTFRAnnotationMm10:::.MOTIF_SETS
 ```
 
 # Session info
 
-```{r}
+```{r session_info}
 sessionInfo()
 ```
 
