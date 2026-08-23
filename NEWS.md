@@ -1,4 +1,4 @@
-# methylTFRAnnotationMm10 0.99.5
+# methylTFRAnnotationMm10 0.99.6
 
 * Initial submission to Bioconductor.
 
@@ -14,3 +14,5 @@
   are always binned on the same scale.
 
 * Fixes on NOTES from biocchecks
+
+* Added 4 spaces as suggested

@@ -13,7 +13,7 @@
 #'
 #' # Mocking a GRangesList as expected by the function output
 #' mock_grl <- GenomicRanges::GRangesList(
-#'   mock_motif_1 = GenomicRanges::GRanges("chr1:100-200")
+#'     mock_motif_1 = GenomicRanges::GRanges("chr1:100-200")
 #' )
 #' saveRDS(mock_grl, mock_file)
 #'
@@ -30,6 +30,6 @@
 #'
 #' @export
 getTFbindsites <- function(motifSet = "altius") {
-  motifSet <- .check_motif_set(motifSet)
-  .resolve_resource(paste0(motifSet, "_tf_bindsites.rds"))
+    motifSet <- .check_motif_set(motifSet)
+    .resolve_resource(paste0(motifSet, "_tf_bindsites.rds"))
 }
