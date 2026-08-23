@@ -1,3 +1,3 @@
-# methylTFRAnnotationsMm10 0.99.3
+# methylTFRAnnotationsMm10 0.99.4
 
 - Fix some notes found in bioccheck
