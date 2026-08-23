@@ -30,8 +30,8 @@ hypomethylated; without the correction that difference in sequence
 composition would read as a difference in factor activity.
 
 The data are too large to ship inside the package, so they are
-hosted on `AnnotationHub` and downloaded on first use. Subsequent
-calls are served from the local `AnnotationHub` cache.
+hosted on AnnotationHub and downloaded on first use. Subsequent
+calls are served from the local AnnotationHub cache.
 
 
 ```{r dummy, include = FALSE}
@@ -40,7 +40,7 @@ mock_dir <- tempdir()
 
 # 1. Mock TF bindsites
 mock_grl <- GenomicRanges::GRangesList(
-  mock_motif_1 = GenomicRanges::GRanges("chr1:100-200")
+    mock_motif_1 = GenomicRanges::GRanges("chr1:100-200")
 )
 saveRDS(mock_grl, file.path(mock_dir, "altius_tf_bindsites.rds"))
 
