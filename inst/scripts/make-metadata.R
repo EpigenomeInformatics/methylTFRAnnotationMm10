@@ -56,15 +56,15 @@ meta <- data.frame(
     Maintainer = "Irem B. Gunduz <irembgunduz@gmail.com>",
     RDataClass = c("list", "GRangesList", "list", "GRangesList", "GRanges", "list", "GRangesList"),
     DispatchClass = "Rds",
-    Location_Prefix = "https://bioconductorhubs.blob.core.windows.net/annotationhub/",
+    Location_Prefix = "https://zenodo.org/",
     RDataPath = c(
-        "methylTFRAnnotationMm10/altius_motif_gcfreq.rds",
-        "methylTFRAnnotationMm10/altius_tf_bindsites.rds",
-        "methylTFRAnnotationMm10/cisbpv2_motif_gcfreq.rds",
-        "methylTFRAnnotationMm10/cisbpv2_tf_bindsites.rds",
-        "methylTFRAnnotationMm10/genomewide_GC_mm10.rds",
-        "methylTFRAnnotationMm10/jaspar2020_motif_gcfreq.rds",
-        "methylTFRAnnotationMm10/jaspar2020_tf_bindsites.rds"
+        "records/22207136/files/altius_motif_gcfreq.rds",
+        "records/22207136/files/altius_tf_bindsites.rds",
+        "records/22207136/files/cisbpv2_motif_gcfreq.rds",
+        "records/22207136/files/cisbpv2_tf_bindsites.rds",
+        "records/22207136/files/genomewide_GC_mm10.rds",
+        "records/22207136/files/jaspar2020_motif_gcfreq.rds",
+        "records/22207136/files/jaspar2020_tf_bindsites.rds"
     ),
     Tags = c(
         "methylTFRAnnotationMm10:GCcontent:MotifAnnotation:ALTIUS",
@@ -85,6 +85,6 @@ write.csv(meta, file = "inst/extdata/metadata.csv", row.names = FALSE)
 if (!requireNamespace("AnnotationHubData", quietly = TRUE)) {
     message("Please install AnnotationHubData to validate your metadata.csv")
 } else {
-    AnnotationHubData::makeAnnotationHubMetadata("inst/extdata")
+    AnnotationHubData::makeAnnotationHubMetadata(".")
     message("Metadata validation completed successfully!")
 }
