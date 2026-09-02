@@ -20,7 +20,7 @@ meta <- data.frame(
         "GC bin frequency tables for JASPAR2020 motifs on mm10. One five-row matrix per motif giving the number of binding sites falling in each genome-wide GC quintile, used by methylTFR to compute the expected methylation a motif would show from GC content alone.",
         "Genome-wide JASPAR2020 transcription factor binding site predictions for mm10, one GRanges per motif, each range extended by 200 bases on either side of the motif match so that methylTFR can read methylation across the footprint window."
     ),
-    BiocVersion = "3.23",
+    BiocVersion = "3.24",
     Genome = "mm10",
     SourceType = "RDS",
     SourceUrl = c(
