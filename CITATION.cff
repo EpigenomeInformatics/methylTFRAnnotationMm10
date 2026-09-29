@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use methylTFRAnnotationMm10, please cite it as below."
+type: software
+title: "methylTFRAnnotationMm10: methylTFR annotations for mm10"
+abstract: >-
+  Precomputed transcription factor binding sites, motif GC frequency tables
+  and a genome-wide GC distribution for the mouse (mm10) genome, for use with the
+  methylTFR package. The data are hosted on AnnotationHub and retrieved on
+  first use.
+authors:
+  - family-names: Gunduz
+    given-names: Irem B.
+    email: irembgunduz@gmail.com
+    orcid: "https://orcid.org/0000-0003-2641-0916"
+version: 0.99.10
+date-released: "2026-09-29"
+doi: 10.18129/B9.bioc.methylTFRAnnotationMm10
+license: Artistic-2.0
+repository-code: "https://github.com/EpigenomeInformatics/methylTFRAnnotationMm10"
+keywords:
+  - R
+  - Bioconductor
+  - AnnotationHub
+  - DNA methylation
+  - transcription factor binding sites
+references:
+  - type: software
+    title: "methylTFR: Quantification of DNA methylation signatures in TFBS"
+    authors:
+      - family-names: Gunduz
+        given-names: Irem B.
+      - family-names: Murugan
+        given-names: Sarath Kumar
+      - family-names: Mueller
+        given-names: Fabian
+    doi: 10.18129/B9.bioc.methylTFR
+    repository-code: "https://github.com/EpigenomeInformatics/methylTFR"
