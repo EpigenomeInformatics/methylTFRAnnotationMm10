@@ -17,6 +17,10 @@ are no metadata columns. Coordinates are 1-based.
 \source{
 See \code{\link{motif_gcfreq}}.
 }
+\value{
+This page documents a data resource rather than a
+function; the object is returned by \code{\link{getTFbindsites}}.
+}
 \description{
 Genome-wide predicted transcription factor binding sites
 on mm10. Returned by \code{\link{getTFbindsites}}; the
@@ -33,13 +37,15 @@ Available motif sets:
 }
 }
 \examples{
-## On first use this downloads the resource from AnnotationHub:
-\dontrun{
-tfbs <- getTFbindsites("jaspar2020")
-length(tfbs)                 # number of motifs
-head(lengths(tfbs))          # binding sites per motif
-tfbs[[1]]
-}
+# AnnotationHub records of this resource and their descriptions
+md <- utils::read.csv(system.file("extdata", "metadata.csv",
+    package = "methylTFRAnnotationMm10"
+))
+md[grepl("_tf_bindsites", md$Title), c("Title", "RDataClass")]
+
+# Loading the resource downloads it from AnnotationHub on first use:
+# tfbs <- getTFbindsites("jaspar2020")
+# length(tfbs); head(lengths(tfbs)); tfbs[[1]]
 }
 \seealso{
 \code{\link{getTFbindsites}}, \code{\link{methylTFRAnnotationMm10}}

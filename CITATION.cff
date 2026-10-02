@@ -12,8 +12,8 @@ authors:
     given-names: Irem B.
     email: irembgunduz@gmail.com
     orcid: "https://orcid.org/0000-0003-2641-0916"
-version: 0.99.10
-date-released: "2026-09-29"
+version: 0.99.12
+date-released: "2026-10-02"
 doi: 10.18129/B9.bioc.methylTFRAnnotationMm10
 license: Artistic-2.0
 repository-code: "https://github.com/EpigenomeInformatics/methylTFRAnnotationMm10"

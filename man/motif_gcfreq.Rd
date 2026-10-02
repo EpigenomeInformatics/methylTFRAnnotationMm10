@@ -32,6 +32,10 @@ from BSgenome sequences; see
 and \code{system.file("extdata", "metadata.csv", package =
 "methylTFRAnnotationMm10")} for the exact sources and versions.
 }
+\value{
+This page documents a data resource rather than a
+function; the object is returned by \code{\link{getGCfreq}}.
+}
 \description{
 Per-motif tables describing the GC composition around
 each motif's binding sites on mm10. Returned by
@@ -55,13 +59,15 @@ Available motif sets:
 }
 }
 \examples{
-## On first use this downloads the resource from AnnotationHub:
-\dontrun{
-gcfreqs <- getGCfreq("jaspar2020")
-length(gcfreqs)          # number of motifs
-dim(gcfreqs[[1]])        # 5 x number of window positions
-colSums(gcfreqs[[1]])    # all 1
-}
+# AnnotationHub records of this resource and their descriptions
+md <- utils::read.csv(system.file("extdata", "metadata.csv",
+    package = "methylTFRAnnotationMm10"
+))
+md[grepl("_motif_gcfreq", md$Title), c("Title", "RDataClass")]
+
+# Loading the resource downloads it from AnnotationHub on first use:
+# gcfreqs <- getGCfreq("jaspar2020")
+# length(gcfreqs); dim(gcfreqs[[1]]); colSums(gcfreqs[[1]])
 }
 \seealso{
 \code{\link{getGCfreq}}, \code{\link{methylTFRAnnotationMm10}}

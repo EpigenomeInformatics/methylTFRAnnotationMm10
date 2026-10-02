@@ -94,3 +94,16 @@ test_that("no local directory is used when neither option nor env var is set", {
     )
     expect_null(methylTFRAnnotationMm10:::.local_dir())
 })
+
+test_that("an invalid local directory setting gives an informative error", {
+    old <- options(methylTFRAnnotationMm10.datadir = c("a", "b"))
+    on.exit(options(old), add = TRUE)
+    expect_error(getGenomeGC(), "single character string")
+
+    options(methylTFRAnnotationMm10.datadir = 1)
+    expect_error(getGCfreq("altius"), "single character string")
+
+    missing_dir <- file.path(tempdir(), "does_not_exist")
+    options(methylTFRAnnotationMm10.datadir = missing_dir)
+    expect_error(getTFbindsites("altius"), "does not exist")
+})
