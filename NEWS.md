@@ -1,3 +1,8 @@
+# methylTFRAnnotationMm10 0.99.13
+
+* Added `inst/CITATION`. BiocCheck reads this file, not
+  `CITATION.cff`, which is excluded from the build.
+
 # methylTFRAnnotationMm10 0.99.12
 
 Changes in response to the second review:
